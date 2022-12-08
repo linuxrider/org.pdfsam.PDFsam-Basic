@@ -2,7 +2,7 @@ app-id: org.pdfsam.PDFsam-Basic
 runtime: org.freedesktop.Platform
 runtime-version: '22.08'
 sdk: org.freedesktop.Sdk
-command: pdfsam
+command: pdfsam-basic
 rename-icon: icon
 finish-args:
   - --share=ipc
@@ -18,7 +18,7 @@ modules:
     - mkdir -p ${FLATPAK_DEST}/bin ${FLATPAK_DEST}/pdfsam
     - tar --strip-components=1 -xf pdfsam.tar.gz -C ${FLATPAK_DEST}/pdfsam
 
-    - ln -s ${FLATPAK_DEST}/pdfsam/bin/pdfsam.sh ${FLATPAK_DEST}/bin/pdfsam
+    - ln -s ${FLATPAK_DEST}/pdfsam/bin/pdfsam.sh ${FLATPAK_DEST}/bin/pdfsam-basic
     - install -Dm644 -t ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps icon.svg
     - install -Dm644 -t ${FLATPAK_DEST}/share/applications/ org.pdfsam.PDFsam-Basic.desktop
   sources:
