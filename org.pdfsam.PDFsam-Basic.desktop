@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Encoding=UTF-8
+Name=PDFsam Basic
+Comment=Open source desktop application to split, merge, rotate and mix PDF files
+Exec=pdfsam-basic %F
+Path=/opt/pdfsam-basic/
+Icon=org.pdfsam.PDFsam-Basic.svg
+MimeType=application/pdf
+Terminal=false
+Categories=Office;

@@ -1,0 +1,32 @@
+app-id: org.pdfsam.PDFsam-Basic
+runtime: org.freedesktop.Platform
+runtime-version: '22.08'
+sdk: org.freedesktop.Sdk
+command: pdfsam
+rename-icon: icon
+finish-args:
+  - --share=ipc
+  - --socket=x11
+  - --share=network
+  - --device=dri
+  - --filesystem=home
+
+modules:
+- name: pdfsam
+  buildsystem: simple
+  build-commands:
+    - mkdir -p ${FLATPAK_DEST}/bin ${FLATPAK_DEST}/pdfsam
+    - tar --strip-components=1 -xf pdfsam.tar.gz -C ${FLATPAK_DEST}/pdfsam
+
+    - ln -s ${FLATPAK_DEST}/pdfsam/bin/pdfsam.sh ${FLATPAK_DEST}/bin/pdfsam
+    - install -Dm644 -t ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps icon.svg
+    - install -Dm644 -t ${FLATPAK_DEST}/share/applications/ org.pdfsam.PDFsam-Basic.desktop
+  sources:
+  - type: file
+    url: https://github.com/torakiki/pdfsam/releases/download/v4.3.4/pdfsam-4.3.4-linux.tar.gz
+    sha256: 4e590f785892cef563721294779c25ed5d9a757138f8fdf56da049861397de3b
+    dest-filename: pdfsam.tar.gz
+  - type: file
+    path: org.pdfsam.PDFsam-Basic.desktop
+  - type: file
+    path: icon.svg
