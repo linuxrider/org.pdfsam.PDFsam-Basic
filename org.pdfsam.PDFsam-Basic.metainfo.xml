@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component type="desktop-application">
+  <id>org.pdfsam.PDFsam-Basic</id>
+  <name>PDFsam Basic</name>
+  <summary>Open source desktop application to split, merge, rotate and mix PDF files</summary>
+  <launchable type="desktop-id">org.pdfsam.PDFsam-Basic.desktop</launchable>
+  <description>
+    <p>
+    </p>
+  </description>
+  <releases>
+    <release date="2023-01-31" version="5.0.0"/>
+  </releases>
+  <metadata_license>CC0-1.0</metadata_license>
+  <content_rating type="oars-1.0">
+    <content_attribute id="money-advertising">mild</content_attribute>
+  </content_rating>
+
+  <url type="homepage">https://pdfsam.org</url>
+  <screenshots>
+    <screenshot type="default">
+      <image>https://user-images.githubusercontent.com/3884479/215745371-1516b655-aeee-4c46-ba84-ca4e3e99d62d.png</image>
+      <caption/>
+    </screenshot>
+    <screenshot type="default">
+      <image>https://user-images.githubusercontent.com/3884479/215745669-261eb9c9-3fe0-43f5-8cd0-a045acfe1dae.png</image>
+      <caption/>
+    </screenshot>
+  </screenshots>
+  <update_contact>info@pdfsam.org</update_contact>
+
+  <project_license>GPL-3.0-or-later</project_license>
+  <url type="bugtracker">https://github.com/torakiki/pdfsam/issues</url>
+</component>

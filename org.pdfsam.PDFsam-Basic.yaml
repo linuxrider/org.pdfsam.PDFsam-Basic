@@ -23,8 +23,8 @@ modules:
     - install -Dm644 -t ${FLATPAK_DEST}/share/applications/ org.pdfsam.PDFsam-Basic.desktop
   sources:
   - type: file
-    url: https://github.com/torakiki/pdfsam/releases/download/v4.3.4/pdfsam-4.3.4-linux.tar.gz
-    sha256: 4e590f785892cef563721294779c25ed5d9a757138f8fdf56da049861397de3b
+    url: https://github.com/torakiki/pdfsam/releases/download/v5.0.0/pdfsam-5.0.0-linux.tar.gz
+    sha256: dba96bd459094aaa95806a4307e9f8e5e3ee7d1662ba69b970d7e4d5e22741cf
     dest-filename: pdfsam.tar.gz
   - type: file
     path: org.pdfsam.PDFsam-Basic.desktop
